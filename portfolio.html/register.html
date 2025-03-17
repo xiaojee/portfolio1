@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <style>
+        /* Resetting default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Arial", sans-serif;
+        }
+
+        /* Body styling */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('tech.png') no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Login form styling */
+        .login-form {
+            background-color: rgba(54, 43, 60, 0.8); /* Dark background for the form */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 450px;
+            color: #f1d4ff; /* Light text color to contrast with dark background */
+        }
+
+        .login-form h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #f1d4ff; /* Soft purple for the header */
+            font-size: 28px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #fff;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 5px;
+            border: 1px solid #d4c6eb;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #f1d4ff;
+            font-size: 18px;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #ffcc00;
+        }
+
+        .btn {
+            background-color: #ffcc00; /* Bright yellow for the button */
+            color: #221241; /* Dark color text for button */
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 18px;
+        }
+
+        .btn:hover {
+            background-color: #e6b800;
+        }
+
+        .btn:active {
+            transform: translateY(2px);
+        }
+
+        /* Styling for the 'Create an Account' link */
+        .login-form p {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+        .login-form p a {
+            color: #ffcc00;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .login-form p a:hover {
+            color: #f1d4ff;
+        }
+
+        /* Additional styles for a neat look */
+        .login-form::before {
+            content: "";
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: -20px;
+            bottom: -20px;
+            background: rgba(255, 255, 255, 0.3);
+            z-index: -1;
+            border-radius: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="login-form">
+        <h2>Log In</h2>
+        <form action="portfolio.html">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="btn">Log In</button>
+        </form>
+        <p>Don't have an account? <a href="create.html">Create an account</a></p>
+    </div>
+</body>
+</html>

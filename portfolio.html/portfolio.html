@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>&#9734;My Portfolio&#9734;</title>
+    <link rel="icon" href="logo.png">
+    <style>
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Arial", sans-serif;
+    }
+
+    body {
+        background: url('tech.png');
+        background-size: cover;
+        background-position: center; 
+        background-attachment: fixed; 
+        background-repeat: no-repeat; 
+        padding-top: 100px;
+    }
+
+    header {
+        background: #362b3c;
+        color: white;
+        padding: 20px 30px;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: inline-block;
+        margin: 0 15px;
+    }
+
+    nav ul li a {
+        background: #302156;
+        color: white;
+        padding: 10px 25px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s ease-in-out;
+    }
+
+    nav ul li a:hover {
+        background: #d4c6eb;
+        color: #221241;
+    }
+
+    main {
+        max-width: 800px;
+        margin: 120px auto 50px;
+        padding: 20px;
+    }
+
+    .profile-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .profile-card {
+        background: rgba(92, 72, 135, 0.9);
+        border-radius: 15px;
+        box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        width: 90%;
+        max-width: 650px;
+        display: flex;
+        align-items: center;
+        text-align: left;
+        gap: 20px;
+        transition: 0.3s ease-in-out;
+    }
+
+    .profile-card:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+    .profile-card img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 4px solid #25063d;
+        flex-shrink: 0;
+    }
+
+    .profile-text {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 80%; 
+    padding: 10px; 
+    }
+
+.profile-text h2 {
+    color: #f1d4ff;
+    font-size: 26px;
+}
+
+.profile-text p {
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 1.8; 
+}
+
+details {
+    background: rgba(127, 107, 154, 0.64);
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+summary {
+    font-weight: bold;
+    color: #f1d4ff;
+}
+
+.yt {
+    text-align: center;
+    padding: 20px;
+    background: #3b1b5c18;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.yt p {
+    font-size: 20px;
+    font-weight: bold;
+    color: #cdbbea;
+    margin-bottom: 10px;
+}
+
+.yt iframe {
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        background: #362b3c;
+        color: white;
+        margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+        .profile-card {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .profile-card:nth-child(even) {
+            flex-direction: column;
+        }
+    }
+    .about {
+            background-color: rgba(92, 72, 135, 0.9);
+            padding: 50px 20px;
+            margin: 50px auto;
+            border-radius: 10px;
+            max-width: 800px;
+        }
+
+        .section-title2 {
+            color: #f1d4ff;
+            font-size: 28px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .about-content {
+            color: #ffffff;
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+        }
+
+        .about-content p {
+            margin-bottom: 20px;
+        }
+
+        .about-content p:last-child {
+            font-style: italic;
+        }
+
+        .about-content p:last-child:before {
+            content: "Website created by: ";
+            font-weight: bold;
+        }
+
+        .about-content p:last-child span {
+            color: #ffcc00;
+            font-weight: bold;
+        }
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background: #e3dbf2be;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.section-description {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    background: white;
+    padding: 8px 12px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, background 0.3s ease;
+    color: #333;
+    font-weight: bold;
+}
+
+.social-links a:hover {
+    transform: scale(1.05);
+    background: #f1f1f1;
+}
+
+.social-links img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgb(189, 125, 235);
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.info-item i {
+    font-size: 20px;
+    color: #7f34bd;
+}
+
+.contact-form {
+    background: rgba(127, 38, 190, 0.559);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: auto;
+    text-align: left;
+}
+
+area {
+            cursor: pointer;
+        }
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #6a3297aa;
+    border-radius: 5px;
+}
+
+.btn {
+    background: #2b0846;
+    color: rgb(171, 142, 204);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #360e5d;
+}
+
+#location {
+    margin: 30px 0;
+}
+
+#location iframe {
+    width: 100%;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-item {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .contact-form {
+        width: 90%;
+    }
+}
+
+   
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>DLR's Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="register.html" class="register">Log in</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="home"></section>
+    <main>
+        <div class="profile-container">
+          
+            <div class="profile-card">
+                <img src="jerah.png" alt="Jerah's Profile Picture">
+                <div class="profile-text">
+                    <h2>&hearts; Jerah &hearts;</h2>
+                    <p>I'm a web developer with a passion for creating beautiful and functional websites. I love coding and learning new technologies.</p>
+                </div>
+            </div>
+            <details class="profile-details">
+                <summary>Click to view more details</summary>
+                <p>
+                    Hey there! I'm Jerah Mae Delos Reyes, a first-year student with a solid foundation in HTML, CSS, and programming. I love building clean, responsive websites and enjoy the challenge of making things both functional and visually appealing.
+                    <br><br>
+                    Aside from coding, I'm also into painting and studying pubmat layouts—I love experimenting with colors, composition, and design. Whether it's a website or a digital poster, I enjoy creating visuals that stand out!
+                    <br><br>
+                    Right now, I'm exploring more about web development and design, working on projects, and constantly learning new things. When I’m not coding or designing, you’ll probably find me painting or watching layout tutorials for inspiration. My goal? To keep growing, improving my skills, and building awesome things along the way!
+                </p>
+            </details>
+    
+           
+            <div class="profile-card">
+                <img src="john2.png" alt="John's Profile Picture">
+                <div class="profile-text">
+                    <h2>&#9733; John &#9733;</h2>
+                    <p>A computer programmer who writes, modifies, and tests code and scripts that allow computer software and applications to function properly.</p>
+                </div>
+            </div>
+            <details class="profile-details">
+                <summary>Click to view more details</summary>
+                <p>
+                    I am John Leonardo De Los Reyes, a first-year programming student with a solid foundation in HTML, CSS, and general programming concepts. I love solving problems through code and bringing ideas to life with clean, functional, and responsive designs.
+                    <br><br>
+                    I'm currently diving deeper into web development, exploring JavaScript, and working on personal projects to sharpen my skills. Beyond coding, I spend a lot of time gaming—it helps me think strategically and keeps me inspired to build better digital experiences.
+                    <br><br>
+                    Whether I'm writing code or playing games, I'm always looking for ways to improve, learn new things, and create something awesome!
+                </p>
+            </details>
+        </div>
+    </main>
+
+    <section>
+        <div class="yt">
+            <p>&infin; About Internet</p>
+            <iframe 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/VPToE8vwKew" 
+                title="YouTube Video" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>        
+        </div>
+    </section>
+    
+   <section id="about" class="about">
+    <h2 class="section-title2">About Us</h2>
+    <div class="about-content">
+        <p>Welcome to DLR's Portfolio! We specialize in building dynamic, user-friendly websites and applications that are not only visually appealing but also highly functional. With a deep passion for web development, our mission is to bring your ideas to life by creating seamless digital experiences that help you stand out online.</p>
+        <p>At DLR, we believe in the power of code to solve problems and make life easier. From simple websites to complex web applications, our team is dedicated to using the latest technologies to deliver high-quality projects that exceed client expectations.</p>
+        <p>Whether you’re a small business looking for an online presence or a large enterprise in need of custom solutions, we work closely with you to ensure that your vision is realized with precision and creativity. Let's build something amazing together!</p>
+        <p><span>2J's DLR's</span></p>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <div class="container">
+        <h2 class="section-title">&#128222; Contact Us</h2>
+        <p class="section-description">&#128172; If you have any questions, feel free to contact us!</p>
+    
+        <div class="contact-info">
+            <div class="info-item">
+                <i class="fas fa-phone"></i>
+                <p> <strong>09949818392 or 09234567899</strong></p>
+            </div>
+            <div class="social-links">
+                <a href="https://www.facebook.com/jee.xiao99" target="_blank">
+                    <img src="facebook.png" alt="Facebook"> Facebook
+                </a>
+                <a href="https://ph.pinterest.com/jerahdelosreyes/" target="_blank">
+                    <img src="pinterest.jpg" alt="Pinterest"> Pinterest
+                </a>
+                <a href="mailto:Anonymous_basta@gmail.com">
+                    <img src="gmail.png" alt="Email"> Email
+                </a>
+            </div>
+        </div>
+    </div>
+    
+        <section id="location">
+            <h2>University</h2>
+            <p>Cebu Eastern College</p>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2095.6942983064637!2d123.89605096147841!3d10.2943223719641!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a99bfcc60d650d%3A0x5ee73506c68dd233!2sCebu%20Eastern%20College%20Cebu%20city!5e1!3m2!1sen!2sph!4v1742111749031!5m2!1sen!2sph" 
+                width="100%" height="300" 
+                style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+        <center>
+            <img src="cute.gif" alt="Clickable Image" usemap="#clickmap" width="90">
+
+          
+            <map name="clickmap">
+            
+                <area shape="rect" coords="50,50,150,150" href="https://www.google.com" alt="Google" target="_blank">
+                
+                <area shape="circle" coords="300,200,50" href="https://www.wikipedia.org" alt="Wikipedia" target="_blank">
+            </map>
+        </center>
+        </section>
+
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </div>
+</section>
+
+
+    <footer>
+        <p>&copy; 2025 DLR's Portfolio. All rights reserved.</p>
+
+    </footer>
+
+</body>
+</html>
